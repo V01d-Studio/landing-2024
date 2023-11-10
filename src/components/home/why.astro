@@ -1,7 +1,52 @@
 ---
 import SectionLayout from "@/layouts/SectionLayout.astro";
+import { Image } from "astro:assets";
 ---
 
 <SectionLayout>
-  <div></div>
+  <div class="flex flex-col justify-end sm:w-full md:w-1/3">
+    <h2>Why us?</h2>
+    <div class="h-6"></div>
+    <ul class="list-disc list-inside text-xl">
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Lorem ipsum dolor sit amet</li>
+    </ul>
+  </div>
+
+  <div
+    class="flex flex-col justify-end flex-1 sm:w-full md:w-2/3 bg-purple text-paperwhite p-6"
+  >
+    <h3>Founder's message</h3>
+    <p class="mt-6">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Feugiat nisl pretium
+      fusce id velit ut. Justo laoreet sit amet cursus sit amet dictum. Sit amet
+      cursus sit amet dictum sit amet justo.
+      <br />
+      <br />
+       Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet.
+      Mattis aliquam faucibus purus in massa tempor nec. Aliquet lectus proin
+      nibh nisl condimentum. Suspendisse sed nisi lacus sed viverra tellus. Eu
+      augue ut lectus arcu.
+      <br />
+      <br />
+       Et odio pellentesque diam volutpat commodo sed egestas egestas!
+    </p>
+
+    <div class="flex w-full mt-6 gap-4">
+      <Image
+        class="rounded-full"
+        src="/team/zahin.webp"
+        alt="Founder & CEO"
+        width="80"
+        height="80"
+      />
+      <div>
+        <h4 class="text-xl font-medium">Zahin Haque</h4>
+        <p class="text-sm font-bold">Founder & CEO</p>
+      </div>
+    </div>
+  </div>
 </SectionLayout>
