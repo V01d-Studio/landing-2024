@@ -1,0 +1,33 @@
+{
+  "name": "landing-2024",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.1",
+    "@astrojs/react": "^3.0.4",
+    "@astrojs/sitemap": "^3.0.3",
+    "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/vercel": "^5.2.0",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^3.4.4",
+    "astro-imagetools": "^0.9.0",
+    "cmdk": "^0.2.0",
+    "geist": "^1.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tailwindcss": "^3.0.24",
+    "tailwindcss-fluid-type": "^2.0.3",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10"
+  }
+}

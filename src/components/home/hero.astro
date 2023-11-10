@@ -1,0 +1,41 @@
+<div class="flex min-h-screen p-8 md:p-16 lg:p-24 xl:p-36 box-border relative">
+  <nav
+    class="absolute top-8 md:top-16 lg:top-24 right-8 md:right-16 lg:right-24 flex flex-col items-end"
+  >
+    {
+      ["Home", "What we do", "Why Us", "Behind the scene", "Expertise"].map(
+        (item) => (
+          <a href="#" class="font-medium">
+            {item}
+          </a>
+        )
+      )
+    }
+  </nav>
+
+  <button
+    class="absolute bottom-8 md:bottom-16 lg:bottom-24 right-8 md:right-16 lg:right-24 \
+				flex flex-row items-center py-2 px-4 bg-purple text-paperwhite \
+				font-black text-lg"
+  >
+    Start your project now
+  </button>
+
+  <div class="flex flex-col justify-end flex-1 max-w-[65rem]">
+    <h1 class="text-8xl">
+      <span class="font-bold">We're</span>
+      {` `}
+      <span class="text-purple font-black">Void Studio.</span>
+    </h1>
+    <h2 class="text-2xl font-semibold">
+      We create web-apps that make your users 'wow!'
+    </h2>
+    <div class="h-10"></div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Feugiat nisl pretium
+      fusce id velit ut. Justo laoreet sit amet cursus sit amet dictum. Sit amet
+      cursus sit amet dictum sit amet justo.
+    </p>
+  </div>
+</div>
