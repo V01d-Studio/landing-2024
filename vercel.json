@@ -8,5 +8,8 @@
       "source": "/plausible/api/event",
       "destination": "https://plausible.io/api/event"
     }
-  ]
+  ],
+  "installCommand": "bun install",
+  "buildCommand": "bun run build",
+  "outputDirectory": ".vercel"
 }
