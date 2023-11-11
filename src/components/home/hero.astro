@@ -9,21 +9,13 @@ import SectionLayout from "@/layouts/SectionLayout.astro";
     {
       ["Home", "What we do", "Why Us", "Behind the scene", "Expertise"].map(
         (item) => (
-          <a href="#" class="font-medium">
+          <a href="#" class="font-semibold">
             {item}
           </a>
         )
       )
     }
   </nav>
-
-  <button
-    class="absolute bottom-8 md:bottom-16 lg:bottom-24 right-8 md:right-16 lg:right-24 \
-				flex flex-row items-center py-2 px-4 bg-purple text-paperwhite \
-				font-black text-lg"
-  >
-    Start your project now
-  </button>
 
   <div class="flex flex-col justify-end flex-1 max-w-[65rem]">
     <h1 class="text-8xl">
@@ -42,4 +34,33 @@ import SectionLayout from "@/layouts/SectionLayout.astro";
       cursus sit amet dictum sit amet justo.
     </p>
   </div>
+
+  <a
+    href="#contact"
+    aria-label="Contact us"
+    class="absolute bottom-0 left-0 bg-purple text-paperwhite text-4xl font-bold overflow-hidden"
+  >
+    <div
+      class="relative flex overflow-hidden h-16 items-center w-screen"
+      aria-hidden="true"
+    >
+      <div class="motion-safe:animate-marquee whitespace-nowrap">
+        <span class="px-4">Start your project now!</span>
+        <span class="px-4">Start your project now!</span>
+        <span class="px-4">Start your project now!</span>
+        <span class="px-4">Start your project now!</span>
+        <span class="px-4">Start your project now!</span>
+      </div>
+
+      <div
+        class="absolute top-1 motion-safe:animate-marquee2 whitespace-nowrap"
+      >
+        <span class="px-4">Start your project now!</span>
+        <span class="px-4">Start your project now!</span>
+        <span class="px-4">Start your project now!</span>
+        <span class="px-4">Start your project now!</span>
+        <span class="px-4">Start your project now!</span>
+      </div>
+    </div>
+  </a>
 </SectionLayout>
