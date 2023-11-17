@@ -1,0 +1,63 @@
+---
+const how = [
+  {
+    title: "Understanding & Discovery",
+    description:
+      "A well-defined problem is a half solved problem. \
+      So before we start anything, we focus on talking to \
+      you in details and take the time to understand your \
+      business, your goals, your customers and your competitors.",
+  },
+  {
+    title: "Design & Feedback",
+    description:
+      "Once we have a clear understanding of your business, \
+      we start designing the solution. We create a prototype \
+      and share it with you for feedback. We iterate on the \
+      design until we have a design that you love.",
+  },
+  {
+    title: "Development & Testing",
+    description:
+      "Once we have a design that you love, we start \
+      developing the solution. We follow the best practices \
+      and use the latest technologies to build a solution \
+      that is fast, secure and scalable.",
+  },
+  {
+    title: "Deployment & Maintenance",
+    description:
+      "Once we are done with the development and testing, \
+      we deploy the solution to a production environment. \
+      We also make sure that the solution is secure and \
+      optimized for performance.",
+  },
+];
+---
+
+<div
+  class="flex flex-col justify-center min-h-screen p-8 md:p-16 lg:p-24 relative"
+>
+  <div>
+    <h1 class="w-full">Oh, the process?</h1>
+    <h1 class="w-full text-right text-purple font-bold">It's simple!</h1>
+  </div>
+
+  <div class="flex max-w-full overflow-x-scroll py-24 gap-8">
+    {
+      how.map((x, idx) => (
+        <div class="min-w-max">
+          <div class="flex text-purple items-end gap-6">
+            <h1 class="text-8xl">{idx + 1}</h1>
+            <h1 class="text-purple font-bold text-2xl max-w-[15rem] pb-2">
+              {x.title}
+            </h1>
+          </div>
+          <p class="w-[30rem] border-l border-midnight text-lg pl-4 mt-6">
+            {x.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>
