@@ -15,7 +15,7 @@
 }
 
 html {
-  @apply font-sans text-midnight bg-paperwhite font-light;
+  @apply font-sans text-midnight bg-paperwhite font-light overscroll-y-contain;
   scroll-behavior: smooth;
 }
 
@@ -38,5 +38,32 @@ h3 {
   @apply text-3xl;
 }
 p {
-  @apply text-xl;
+  @apply text-lg;
+}
+
+:root {
+  --primary: #eeeee1;
+  --secondary: #111111;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
 }
