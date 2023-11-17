@@ -1,0 +1,33 @@
+---
+interface Props {
+  type?: "text" | "password" | "email" | "number" | "search" | "tel" | "url";
+  placeholder: string;
+  disabled?: boolean;
+  value?: string;
+  onChange?: (value: string) => void;
+  className?: string;
+}
+
+const {
+  placeholder = "",
+  disabled = false,
+  value = "",
+  className = "",
+  onChange = () => {},
+} = Astro.props;
+---
+
+<input
+  class:list={[
+    "flex h-10 border-b \
+    bg-[transparent] px-3 py-2 text-sm \
+    ring-offset-background \
+    placeholder:text-muted-foreground placeholder:text-lg \
+    file:border-0 file:bg-transparent file:text-sm file:font-medium \
+    focus-visible:outline-none focus-visible:ring-2 \
+    focus-visible:ring-ring focus-visible:ring-offset-2 \
+    disabled:cursor-not-allowed disabled:opacity-50",
+    className ?? "",
+  ]}
+  {...{ placeholder, disabled, value, onChange }}
+/>
