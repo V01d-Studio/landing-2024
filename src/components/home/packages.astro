@@ -56,10 +56,10 @@ const packages = [
 >
   <h1 class="w-full text-center">Get started right now!</h1>
 
-  <div class="flex flex-wrap gap-4 mt-12">
+  <div class="flex flex-col lg:flex-row gap-8 mt-12 flex-wrap">
     {
       packages.map((x) => (
-        <div class="flex flex-col justify-between flex-1 border-2 border-purple p-3">
+        <div class="flex flex-col w-full lg:w-auto justify-between flex-1 border-2 border-purple p-3">
           <div>
             <h3 class="text-center text-lg font-bold">{x.title}</h3>
             <p class="text-center italic font-normal text-sm">{x.estimation}</p>
