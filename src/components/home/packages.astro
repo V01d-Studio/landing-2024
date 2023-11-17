@@ -44,7 +44,7 @@ const packages = [
       "100% mobile Responsive",
       "Deployment & launch",
     ],
-    seats: 3,
+    seats: 2,
     availableSeats: 1,
     price: 9999,
   },
@@ -59,23 +59,44 @@ const packages = [
   <div class="flex flex-wrap gap-4 mt-12">
     {
       packages.map((x) => (
-        <div class="flex-1 border-2 border-purple p-3">
-          <h3 class="text-center text-lg">{x.title}</h3>
-          <p class="text-center italic text-sm font-medium">{x.estimation}</p>
-
-          <p class="text-center text-sm mt-8">Starting at</p>
-          <h3 class="text-center text-2xl text-purple">
-            ${x.price.toLocaleString("en-US")}
-          </h3>
-
-          <div class="flex justify-center w-full mt-6">
-            <button class="mx-auto px-4 py-2 text-md font-semibold bg-midnight text-paperwhite">
-              Book a call
-            </button>
+        <div class="flex flex-col justify-between flex-1 border-2 border-purple p-3">
+          <div>
+            <h3 class="text-center text-lg font-bold">{x.title}</h3>
+            <p class="text-center italic font-normal text-sm">{x.estimation}</p>
           </div>
-          <p class="text-center text-sm mt-3">
-            {`${x.availableSeats}/${x.seats} seats available`} <sup>*</sup>
-          </p>
+
+          <div>
+            <p class="text-center text-xs pt-8">Starting at</p>
+            <h3
+              class:list={[
+                "text-center text-purple",
+                x.discountedPrice && x.discountedPrice > 0
+                  ? "text-lg line-through font-bold text-midnight"
+                  : "text-2xl",
+              ]}
+            >
+              ${x.price.toLocaleString("en-US")}
+            </h3>
+
+            {x.discountedPrice && (
+              <h3 class:list={["text-center text-2xl text-purple"]}>
+                ${x.discountedPrice.toLocaleString("en-US")}
+              </h3>
+            )}
+
+            <a
+              href="https://cal.com/void-studio-tech"
+              class="flex justify-center w-full mt-6"
+              rel="noopener noreferrer"
+            >
+              <button class="mx-auto px-4 py-2 text-md font-semibold bg-midnight text-paperwhite">
+                Book a call
+              </button>
+            </a>
+            <p class="text-center font-normal text-xs mt-3">
+              {`${x.availableSeats}/${x.seats} seats available`} <sup>*</sup>
+            </p>
+          </div>
         </div>
       ))
     }
