@@ -3,20 +3,6 @@ import SectionLayout from "@/layouts/SectionLayout.astro";
 ---
 
 <SectionLayout>
-  <nav
-    class="absolute top-8 md:top-16 lg:top-24 right-8 md:right-16 lg:right-24 flex flex-col items-end"
-  >
-    {
-      ["Home", "What we do", "Why Us", "Behind the scene", "Expertise"].map(
-        (item) => (
-          <a href="#" class="font-semibold">
-            {item}
-          </a>
-        )
-      )
-    }
-  </nav>
-
   <div class="flex flex-col justify-end flex-1 max-w-[65rem]">
     <h1 class="text-8xl">
       <span class="font-bold">We're</span>
@@ -40,7 +26,7 @@ import SectionLayout from "@/layouts/SectionLayout.astro";
   <a
     href="#contact"
     aria-label="Contact us"
-    class="absolute bottom-0 left-0 bg-purple h-16 sm:pt-3 lg:pt-2 text-paperwhite text-4xl font-bold overflow-hidden"
+    class="flex items-center absolute bottom-0 left-0 bg-purple h-16 sm:pt-3 lg:pt-2 text-paperwhite text-4xl font-bold overflow-hidden"
   >
     <div
       class="relative flex overflow-hidden items-center w-screen"

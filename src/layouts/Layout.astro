@@ -2,7 +2,7 @@
 interface Props {
   title: string;
 }
-import "../styles/global.css";
+import "@/styles/global.css";
 
 const { title } = Astro.props;
 ---
@@ -25,7 +25,21 @@ const { title } = Astro.props;
       src="/plausible/js/script.js"></script>
     <title>{title}</title>
   </head>
-  <body class="overflow-x-hidden">
+  <body class="overflow-x-hidden relative">
+    <nav
+      class="fixed top-8 md:top-16 lg:top-24 right-8 md:right-16 flex-col items-end z-50 bg-paperwhite p-3 hidden lg:flex"
+    >
+      {
+        ["Home", "What we do", "Why Us", "Behind the scene", "Expertise"].map(
+          (item) => (
+            <a href="#" class="font-semibold text-[18px] link-underline">
+              {item}
+            </a>
+          )
+        )
+      }
+    </nav>
+
     <slot />
   </body>
 </html>
