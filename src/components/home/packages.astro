@@ -1,0 +1,83 @@
+---
+const packages = [
+  {
+    title: "Landing site",
+    estimation: "in less than 72 hours",
+    features: [
+      "Landing page",
+      "UI/UX design",
+      "Contact form",
+      "Analytics integrations",
+      "100% mobile Responsive",
+      "2 revisions",
+    ],
+    seats: 10,
+    price: 1499,
+    availableSeats: 8,
+    discountedPrice: 1299,
+    discountForSeats: 3,
+  },
+  {
+    title: "MVP",
+    estimation: "in less than a month",
+    features: [
+      "Landing page",
+      "Full-stack development",
+      "UI/UX design",
+      "Analytics integrations",
+      "100% mobile Responsive",
+      "Deployment & launch",
+    ],
+    seats: 3,
+    availableSeats: 1,
+    price: 5599,
+  },
+  {
+    title: "Web app",
+    estimation: "in less than three months",
+    features: [
+      "Landing page",
+      "Full-stack development",
+      "UI/UX design",
+      "Analytics integrations",
+      "Custom dashboards",
+      "100% mobile Responsive",
+      "Deployment & launch",
+    ],
+    seats: 3,
+    availableSeats: 1,
+    price: 9999,
+  },
+];
+---
+
+<div
+  class="flex flex-col justify-center min-h-screen p-8 md:p-16 lg:p-24 relative"
+>
+  <h1 class="w-full text-center">Get started right now!</h1>
+
+  <div class="flex flex-wrap gap-4 mt-12">
+    {
+      packages.map((x) => (
+        <div class="flex-1 border-2 border-purple p-3">
+          <h3 class="text-center text-lg">{x.title}</h3>
+          <p class="text-center italic text-sm font-medium">{x.estimation}</p>
+
+          <p class="text-center text-sm mt-8">Starting at</p>
+          <h3 class="text-center text-2xl text-purple">
+            ${x.price.toLocaleString("en-US")}
+          </h3>
+
+          <div class="flex justify-center w-full mt-6">
+            <button class="mx-auto px-4 py-2 text-md font-semibold bg-midnight text-paperwhite">
+              Book a call
+            </button>
+          </div>
+          <p class="text-center text-sm mt-3">
+            {`${x.availableSeats}/${x.seats} seats available`} <sup>*</sup>
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>
