@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "/Users/samnan/Documents/codes/VOID/landing-2024",
     "paths": {
       "@/*": [
         "src/*"

@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/home/hero.astro";
 import Why from "@/components/home/why.astro";
 import Packages from "@/components/home/packages.astro";
-import Contact from "@/components/home/contact.astro";
+import Contact from "@/components/home/contact.tsx";
 import What from "@/components/home/what.astro";
 import How from "@/components/home/how.astro";
 ---
@@ -15,6 +15,6 @@ import How from "@/components/home/how.astro";
     <Why />
     <Packages />
     <How />
-    <Contact />
+    <Contact client:idle />
   </main>
 </Layout>
