@@ -5,6 +5,8 @@ interface Props {
   value?: string;
   onChange?: (value: string) => void;
   className?: string;
+  rows?: number;
+  columns?: number;
 }
 
 const {
@@ -13,12 +15,14 @@ const {
   value = "",
   className = "",
   onChange = () => {},
+  rows = 0,
+  columns = 0,
 } = Astro.props;
 ---
 
 <textarea
   class:list={[
-    "flex text-sm h-10 border-b \
+    "flex text-sm h-auto border-b \
     bg-[transparent] px-3 py-2  ml-3 \
     ring-offset-background \
     placeholder:text-muted-foreground placeholder:text-lg \
@@ -28,4 +32,4 @@ const {
     disabled:cursor-not-allowed disabled:opacity-50 resize-y",
     className ?? "",
   ]}
-  {...{ placeholder, disabled, value, onChange }}></textarea>
+  {...{ placeholder, disabled, value, onChange, rows, columns }}></textarea>

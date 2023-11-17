@@ -11,11 +11,6 @@ const what = [
       "We design beautiful and functional user interfaces for web and mobile applications.",
   },
   {
-    title: "Software Consultancy",
-    description:
-      "We help you make the right technical decisions for your business to help you grow.",
-  },
-  {
     title: "Blockchain & dApps",
     description:
       "We build decentralized applications (dApps) on the Ethereum blockchain.",
@@ -25,11 +20,6 @@ const what = [
     description:
       "We build AI and ML solutions to help you automate your business processes.",
   },
-  {
-    title: "Enterprise Solutions",
-    description:
-      "We build enterprise solutions to help you manage your business processes.",
-  },
 ];
 ---
 
@@ -37,12 +27,10 @@ const what = [
   class="w-screen flex flex-col justify-center min-h-screen p-8 md:p-16 lg:p-24 relative"
 >
   <h2 class="w-full text-center">What we do</h2>
-  <div
-    class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4 mt-6"
-  >
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 grid-flow-row gap-12 mt-36">
     {
       what.map((x) => (
-        <div class="border border-midnight px-3 py-6">
+        <div class="border-2 border-midnight px-3 py-6">
           <h3 class="text-xl mb-4">{x.title}</h3>
           <p class="text-sm">{x.description}</p>
         </div>
