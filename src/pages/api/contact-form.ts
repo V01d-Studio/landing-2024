@@ -10,7 +10,7 @@ const token = import.meta.env.UPSTASH_REDIS_REST_TOKEN;
 
 const redis = new Redis({ url, token });
 
-export const post: APIRoute = async function post({ request }) {
+export const POST: APIRoute = async function POST({ request }) {
   try {
     const formData: FormData = await request.formData();
 
@@ -19,7 +19,7 @@ export const post: APIRoute = async function post({ request }) {
     contactSchema.parse(unsanitizedData);
     redis.lpush(CONTACT_FORMDATA_LIST_KEY, stringifiedFormData);
 
-    return Response.json({ success: true })
+    return Response.json({ success: true, message: 'Your data has been saved successfully!' })
   } catch {
     return Response.error();
   }

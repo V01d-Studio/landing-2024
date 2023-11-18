@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react";
-import { useState, useCallback, forwardRef } from "react";
+import { useState, useCallback, useEffect, forwardRef } from "react";
 import { useForm } from "react-hook-form";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -52,7 +52,7 @@ const TextAreaField = forwardRef<HTMLTextAreaElement, TextareaProps>(
 );
 
 export default function Contact() {
-  const [responseMessage, setResponseMessage] = useState("");
+  const [responseMessage, setResponseMessage] = useState<string | null>(null);
 
   const {
     register,
@@ -91,6 +91,7 @@ export default function Contact() {
             placeholder="Elon Musk"
             className="w-[20ch]"
             {...register("name")}
+            required
           />
         </div>
 
@@ -100,6 +101,7 @@ export default function Contact() {
             placeholder="CEO & Founder"
             className="w-[25ch]"
             {...register("title")}
+            required
           />
         </div>
         <div className="flex">
@@ -108,6 +110,7 @@ export default function Contact() {
             placeholder="Tesla"
             className="w-[20ch]"
             {...register("company")}
+            required
           />
           {"."}
         </div>
@@ -119,6 +122,7 @@ export default function Contact() {
             placeholder="create a mind-blowing landing/marketing site for CyberTruck"
             className="min-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
             {...register("description")}
+            required
           />
         </div>
 
@@ -128,6 +132,7 @@ export default function Contact() {
             placeholder="3 days"
             className="w-[10ch]"
             {...register("deadline")}
+            required
           />
         </div>
 
@@ -139,6 +144,7 @@ export default function Contact() {
             placeholder="1B"
             className="relative sm:max-w-[5ch] lg:max-w-[20ch]"
             {...register("budget")}
+            required
           />
           <p className="overflow-hidden whitespace-nowrap">{"USD."}</p>
         </div>
@@ -151,6 +157,7 @@ export default function Contact() {
             placeholder="email"
             className="relative sm:max-w-[5ch] lg:max-w-[20ch]"
             {...register("email")}
+            required
           />
           <p className="overflow-hidden whitespace-nowrap">
             {"let's talk soon!"}
@@ -158,13 +165,19 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="flex w-full justify-center items-center">
+      <div className="flex flex-col w-full justify-center items-center gap-6">
         <button
           type="submit"
           className="w-max text-6xl font-black mt-16 lg:mt-36 link-underline"
         >
           Let's talk? 🚀
         </button>
+
+        {responseMessage && (
+          <p className="w-max text-center text-lg px-4 py-2 bg-purple text-paperwhite">
+            {responseMessage}
+          </p>
+        )}
       </div>
     </form>
   );
