@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+const logos = [
+  { src: "js.svg", title: "Javscript" },
+  { src: "typescript.svg", title: "Typescript" },
+  { src: "python.svg", title: "Python3" },
+  { src: "golang.svg", title: "Golang" },
+  { src: "solidity.svg", title: "Solidity" },
+  { src: "elixir.svg", title: "Elixir" },
+  { src: "react.svg", title: "React or React Native" },
+  { src: "nextjs.svg", title: "Next JS" },
+  { src: "astro.svg", title: "Astro" },
+  { src: "solidjs.svg", title: "Solid JS" },
+  { src: "svelte.svg", title: "Svelte/SvelteKit" },
+  { src: "expo.svg", title: "Expo" },
+  { src: "express.svg", title: "Express" },
+  { src: "fastify.svg", title: "Fastify" },
+  { src: "chakra.svg", title: "Chakra UI" },
+  { src: "tailwindcss.svg", title: "Tailwind CSS" },
+  { src: "css.svg", title: "CSS 3" },
+  { src: "nestjs.svg", title: "Nest JS" },
+  { src: "trpc.svg", title: "tRPC" },
+  { src: "django.svg", title: "Django" },
+  { src: "docker.svg", title: "Docker" },
+  { src: "prisma.svg", title: "Prisma ORM" },
+  { src: "postgresql.svg", title: "Postgresql" },
+  { src: "mongo.svg", title: "MongoDB/Mongoose" },
+  { src: "bitcoin.svg", title: "Bitcoin chain" },
+  { src: "eth.svg", title: "Ethereum blockchain" },
+  { src: "polygon.svg", title: "Polygon blockchain" },
+  { src: "bitcoin.svg", title: "Bitcoin chain" },
+  { src: "solana.svg", title: "Solana chain" },
+  { src: "hardhat.svg", title: "Hardhat" },
+  { src: "xd.svg", title: "Adobe XD" },
+  { src: "ae.svg", title: "Adobe After Effect" },
+  { src: "figma.svg", title: "Figma" },
+];
+---
+
+<div
+  class="flex flex-col justify-center min-h-screen p-8 md:p-16 lg:p-24 relative"
+>
+  <div>
+    <h1 class="w-full">Technologies we work with</h1>
+    <h1 class="w-full text-right text-purple font-bold">Or, our expertise</h1>
+  </div>
+
+  <div
+    class="flex flex-wrap w-full gap-6 lg:gap-12 justify-between items-center mt-16 lg:mt-36"
+  >
+    {
+      logos.map((x) => (
+        <Image
+          class="object-contain w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]"
+          src={`/stack/${x.src}`}
+          alt={`logo of technology ${x.title}`}
+          height={60}
+          width={60}
+        />
+      ))
+    }
+  </div>
+</div>
