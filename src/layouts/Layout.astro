@@ -52,13 +52,18 @@ const { title, style } = Astro.props;
       }
     </nav>
 
-    <Image
-      src="/favicon.svg"
-      alt="Logo of Void Studio"
-      height={120}
-      width={120}
-      class="h-[60px] w-[60px] lg:h-[80px] lg:w-[80px] xl:h-[120px] xl:w-[120px] fixed top-8 md:top-16 lg:top-24 left-8 md:left-16 z-50"
-    />
+    <a
+      href="#hero"
+      class="fixed top-8 md:top-16 lg:top-24 left-8 md:left-16 z-50"
+    >
+      <Image
+        src="/favicon.svg"
+        alt="Logo of Void Studio"
+        height={120}
+        width={120}
+        class="h-[60px] w-[60px] lg:h-[80px] lg:w-[80px] xl:h-[120px] xl:w-[120px]"
+      />
+    </a>
 
     <slot />
   </body>
