@@ -25,16 +25,21 @@ const logos = [
   { src: "prisma.svg", title: "Prisma ORM" },
   { src: "postgresql.svg", title: "Postgresql" },
   { src: "mongo.svg", title: "MongoDB/Mongoose" },
+  { src: "redis.svg", title: "Redis" },
+  { src: "planetscale.svg", title: "Planetscale" },
+  { src: "aws.svg", title: "AWS Cloud Platform" },
   { src: "bitcoin.svg", title: "Bitcoin chain" },
   { src: "eth.svg", title: "Ethereum blockchain" },
   { src: "polygon.svg", title: "Polygon blockchain" },
-  { src: "bitcoin.svg", title: "Bitcoin chain" },
   { src: "solana.svg", title: "Solana chain" },
+  { src: "celo.svg", title: "Celo chain" },
   { src: "hardhat.svg", title: "Hardhat" },
   { src: "xd.svg", title: "Adobe XD" },
   { src: "ae.svg", title: "Adobe After Effect" },
   { src: "figma.svg", title: "Figma" },
 ];
+
+console.log({ count: logos.length });
 ---
 
 <div
@@ -46,7 +51,7 @@ const logos = [
   </div>
 
   <div
-    class="flex flex-wrap w-full gap-6 lg:gap-12 justify-between items-center mt-16 lg:mt-36"
+    class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 grid-flow-row w-full gap-6 md:gap-12 lg:gap-10 mt-16 lg:mt-36"
   >
     {
       logos.map((x) => (
