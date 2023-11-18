@@ -2,6 +2,9 @@
   "name": "landing-2024",
   "type": "module",
   "version": "0.0.1",
+  "description": "Void Studio landing page for 2024",
+  "author": "Samnan Rahee",
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
