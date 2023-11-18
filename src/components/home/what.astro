@@ -38,17 +38,11 @@ const what = [
   >
     {
       what.map((x) => (
-        <div class="flex border-2 border-midnight items-center px-3 py-6">
+        <div class="flex flex-col lg:flex-row border-2 border-midnight items-start lg:items-center px-3 py-6 gap-4">
           {x.icon && (
-            <Image
-              src={x.icon}
-              alt="Web apps"
-              width={80}
-              height={80}
-              class="mr-4"
-            />
+            <Image src={x.icon} alt={x.title} width={80} height={80} />
           )}
-          <div class="flex-1">
+          <div class="flex-1 w-full md:w-auto">
             <h3 class="text-xl mb-4">{x.title}</h3>
             <p class="text-sm">{x.description}</p>
           </div>
