@@ -7,6 +7,7 @@ import Contact from "@/components/home/contact.tsx";
 import What from "@/components/home/what.astro";
 import How from "@/components/home/how.astro";
 import Expertise from "@/components/home/expertise.astro";
+import Footer from "@/components/home/footer.astro";
 ---
 
 <Layout title="Void Studio" style="background-image: url(/gradient.svg)">
@@ -18,5 +19,6 @@ import Expertise from "@/components/home/expertise.astro";
     <Why />
     <How />
     <Contact client:idle />
+    <Footer />
   </main>
 </Layout>
